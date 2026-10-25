@@ -6,3 +6,25 @@ html, body {
   padding: 0;
   min-height: 100vh;
 }
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-forma-bold);
+  }
+  .font-script {
+    font-family: var(--font-panton);
+  }
+  .font-text {
+    font-family: var(--font-forma-display);
+  }
+  .font-variable {
+    font-family: var(--font-forma-variable);
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

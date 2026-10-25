@@ -8,14 +8,16 @@ const formaLight = localFont({ src: './fonts/FormaDJRCyrillicBanner-Light-Testin
 const formaVariable = localFont({ src: './fonts/FormaDJRCyrillicVariable-VF-Testing.ttf', variable: '--font-forma-variable', display: 'swap' });
 const formaDisplay = localFont({ src: './fonts/FormaDJRCyrillicDisplay-Regular-Testing.ttf', variable: '--font-forma-display', display: 'swap' });
 const panton = localFont({ src: './fonts/ofont.ru_Panton Rust Script.ttf', variable: '--font-panton', display: 'swap' });
-const pantonSemiBold = localFont({ src: './fonts/Panton Rust Script SemiBold.ttf', variable: '--font-panton-semibold', display: 'swap' });
 
-export const metadata = { title: 'Surf Train Co', description: 'Школа серфинга' };
+export const metadata = { 
+  title: 'Surf Train Co', 
+  description: 'Школа серфинга' 
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
-      <body className={`${formaRegular.variable} ${formaBold.variable} ${formaLight.variable} ${formaVariable.variable} ${formaDisplay.variable} ${panton.variable} ${pantonSemiBold.variable}`}>
+      <body className={`${formaRegular.variable} ${formaBold.variable} ${formaLight.variable} ${formaVariable.variable} ${formaDisplay.variable} ${panton.variable}`}>
         <Header />
         {children}
       </body>
