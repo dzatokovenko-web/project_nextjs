@@ -7,19 +7,23 @@ import Programs from './components/programs';
 import Sales from './components/sales';
 import Quote2 from './components/quote2';
 import Booking from './components/booking';
+import Map from './components/map';
+import Footer from './components/footer';
 
 export default function Home() {
   return (
     <main>
-      <Promo />
+      <section id="home"><Promo /></section>
       <Cards />
-      <About />
+      <section id="about"><About /></section>
       <Quote />
-      <Awards />
-      <Programs />
-      <Sales />
+      <section id="awards"><Awards /></section>
+      <section id="prices"><Programs /></section>
+      <section id="promo"><Sales /></section>
       <Quote2 />
-      <Booking />
+      <section id="booking"><Booking /></section>
+      <section id="contacts"><Map /></section>
+      <Footer />
     </main>
   );
 }

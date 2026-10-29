@@ -28,3 +28,8 @@ html, body {
     scrollbar-width: none;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
