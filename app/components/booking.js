@@ -13,7 +13,7 @@ export default function Booking() {
     setStatus('Отправка...');
 
     const serviceId = 'service_n5elo7q';
-    const templateId = 'template_mc2m7lc'; // <-- НОВЫЙ ID
+    const templateId = 'template_mc2m7lc';
     const publicKey = 'p6-8Suo3-yvkEtbQw';
 
     emailjs.sendForm(serviceId, templateId, form.current, publicKey)
@@ -60,7 +60,8 @@ export default function Booking() {
               </div>
             </div>
 
-            <div className="relative w-full sm:w-[654px] h-[85px]">
+            {/* Убрал фиксированную ширину sm:w-[654px], оставил просто w-full sm:w-[654px] чтобы оно не растягивалось больше */}
+            <div className="relative w-full sm:max-w-[654px] h-[85px]">
               <select name="tariff" required defaultValue="" className="w-full h-full appearance-none rounded-[85px] border border-[#002B41]/30 bg-transparent px-6 text-[16px] text-[#002B41] outline-none focus:border-[#002B41] cursor-pointer">
                 <option value="" disabled hidden>Выберите подходящий тариф</option>
                 <option value="Easy Start">Easy Start</option>
