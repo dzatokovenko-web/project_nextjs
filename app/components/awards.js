@@ -17,8 +17,10 @@ export default function Awards() {
 
   return (
     <section className="relative w-full bg-[#EEF5FF] overflow-hidden">
-      <div className="absolute inset-0 top-10 pointer-events-none">
-        <Image src="/icons/Фон.svg" alt="" fill className="object-cover object-top" />
+      
+      {/* Фон для Наград */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <Image src="/icons/bg-main.svg" alt="" fill className="object-cover object-top" />
       </div>
 
       <div className="relative z-10 w-full px-4 md:px-8 xl:px-20 2xl:px-[258px] pt-16 md:pt-24">
@@ -54,7 +56,7 @@ export default function Awards() {
             return (
               <div 
                 key={card.id} 
-                className={`shrink-0 w-[85vw] md:w-[65vw] max-w-[1000px] h-auto lg:h-[450px] rounded-[60px] bg-[#EEF5FF] p-3 md:p-4 border border-[#002B41]/10 transition-opacity duration-500 ${isActive ? 'opacity-100' : 'opacity-60'}`}
+                className={`shrink-0 w-[85vw] md:w-[65vw] max-w-[1000px] h-auto lg:h-[450px] rounded-[60px] bg-white/40 backdrop-blur-sm p-3 md:p-4 border border-[#002B41]/10 transition-opacity duration-500 ${isActive ? 'opacity-100' : 'opacity-60'}`}
               >
                 <div className="relative w-full h-full rounded-[35px] bg-white p-5 md:p-6 flex flex-col md:flex-row items-center gap-6">
                   <div className="relative w-full md:w-[55%] h-[200px] md:h-full rounded-[35px] overflow-hidden shrink-0 z-10">

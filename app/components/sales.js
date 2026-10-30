@@ -21,15 +21,18 @@ export default function Sales() {
 
   return (
     <section className="relative w-full bg-[#EEF5FF] pt-16 pb-32 md:pt-24 md:pb-48 overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <Image src="/icons/Подложка вырез.svg" alt="" fill className="object-cover object-bottom" />
+      
+      {/* Подложка */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <Image src="/icons/bg-wave.svg" alt="" fill className="object-cover object-bottom" />
       </div>
 
+      {/* Доски */}
       <div className="absolute top-1/2 -translate-y-1/2 left-4 md:left-10 w-[80px] md:w-[130px] pointer-events-none z-0">
-        <Image src="/icons/Доска серф.svg" alt="" width={200} height={600} className="w-full h-auto -rotate-3" />
+        <Image src="/icons/surfboard.svg" alt="" width={200} height={600} className="w-full h-auto -rotate-3" />
       </div>
       <div className="absolute top-1/2 -translate-y-1/2 right-4 md:right-10 w-[80px] md:w-[130px] pointer-events-none z-0">
-        <Image src="/icons/Доска серф.svg" alt="" width={200} height={600} className="w-full h-auto rotate-3 -scale-x-100" />
+        <Image src="/icons/surfboard.svg" alt="" width={200} height={600} className="w-full h-auto rotate-3 -scale-x-100" />
       </div>
 
       <div className="relative z-10 w-full px-4 md:px-8 xl:px-20 2xl:px-[258px]">
@@ -56,7 +59,7 @@ export default function Sales() {
         <div ref={scrollRef} className="flex gap-5 md:gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide">
           {SALES.map((card) => (
             <div key={card.id} className="shrink-0 w-[85vw] sm:w-[45vw] lg:w-[calc(33.333%-16px)] snap-start max-w-[400px]">
-              <div className="w-full rounded-[60px] bg-[#EEF5FF] p-4 md:p-5 border border-white/50">
+              <div className="w-full rounded-[60px] bg-white/40 backdrop-blur-sm p-4 md:p-5 border border-white/50">
                 <div className="relative w-full aspect-square rounded-[35px] overflow-hidden">
                   <Image src={card.photo} alt={card.bottomText} fill className="object-cover" sizes="(max-width: 640px) 85vw, (max-width: 1024px) 45vw, 33vw" />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />

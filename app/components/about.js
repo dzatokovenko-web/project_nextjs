@@ -3,8 +3,10 @@ import Image from 'next/image';
 export default function About() {
   return (
     <section className="relative w-full bg-[#EEF5FF] overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <Image src="/icons/Фон.svg" alt="" fill className="object-cover object-top" priority />
+      
+      {/* Фон для About */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <Image src="/icons/bg-main.svg" alt="" fill className="object-cover object-top" priority />
       </div>
 
       <div className="relative z-10 w-full px-4 md:px-8 xl:px-20 2xl:px-[258px] py-16 md:py-20">

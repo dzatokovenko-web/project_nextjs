@@ -28,9 +28,9 @@ export default function Booking() {
   return (
     <section className="relative w-full overflow-hidden py-16 md:py-24">
       
-      {/* Вот подложка для Booking */}
+      {/* Подложка */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <Image src="/icons/Подложка вырез.svg" alt="" fill className="object-cover object-top" />
+        <Image src="/icons/bg-wave.svg" alt="" fill className="object-cover object-top" />
       </div>
 
       <div className="relative z-10 w-full px-4 md:px-8 xl:px-20 2xl:px-[258px]">
