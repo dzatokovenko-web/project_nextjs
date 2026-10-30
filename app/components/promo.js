@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Promo() {
   return (
-    <section className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px]">
+    <section className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] bg-[#EEF5FF]">
       <Image src="/photo/promo.png" alt="Покоряйте волны вместе с нами" fill className="object-cover" priority />
 
       <div className="relative z-10 h-full w-full px-4 md:px-8 xl:px-20 2xl:px-[290px] flex flex-col justify-start pt-24 md:pt-28 lg:pt-32 xl:pt-36">

@@ -26,9 +26,11 @@ export default function Booking() {
   };
 
   return (
-    <section className="relative w-full bg-[#EEF5FF] overflow-hidden py-16 md:py-24">
-      <div className="absolute inset-0 pointer-events-none">
-        <Image src="/icons/Фон.svg" alt="" fill className="object-cover object-top" />
+    <section className="relative w-full overflow-hidden py-16 md:py-24">
+      
+      {/* Вот подложка для Booking */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <Image src="/icons/Подложка вырез.svg" alt="" fill className="object-cover object-top" />
       </div>
 
       <div className="relative z-10 w-full px-4 md:px-8 xl:px-20 2xl:px-[258px]">
@@ -46,7 +48,7 @@ export default function Booking() {
                   type="date" 
                   name="date"
                   required
-                  className="w-full h-full rounded-[85px] border border-[#002B41]/30 bg-transparent px-6 text-[16px] text-[#002B41] outline-none focus:border-[#002B41] cursor-pointer" 
+                  className="w-full h-full rounded-[85px] border border-[#002B41]/30 bg-white/50 backdrop-blur-sm px-6 text-[16px] text-[#002B41] outline-none focus:border-[#002B41] cursor-pointer" 
                 />
               </div>
               
@@ -55,14 +57,13 @@ export default function Booking() {
                   type="time" 
                   name="time"
                   required
-                  className="w-full h-full rounded-[85px] border border-[#002B41]/30 bg-transparent px-6 text-[16px] text-[#002B41] outline-none focus:border-[#002B41] cursor-pointer" 
+                  className="w-full h-full rounded-[85px] border border-[#002B41]/30 bg-white/50 backdrop-blur-sm px-6 text-[16px] text-[#002B41] outline-none focus:border-[#002B41] cursor-pointer" 
                 />
               </div>
             </div>
 
-            {/* Убрал фиксированную ширину sm:w-[654px], оставил просто w-full sm:w-[654px] чтобы оно не растягивалось больше */}
             <div className="relative w-full sm:max-w-[654px] h-[85px]">
-              <select name="tariff" required defaultValue="" className="w-full h-full appearance-none rounded-[85px] border border-[#002B41]/30 bg-transparent px-6 text-[16px] text-[#002B41] outline-none focus:border-[#002B41] cursor-pointer">
+              <select name="tariff" required defaultValue="" className="w-full h-full appearance-none rounded-[85px] border border-[#002B41]/30 bg-white/50 backdrop-blur-sm px-6 text-[16px] text-[#002B41] outline-none focus:border-[#002B41] cursor-pointer">
                 <option value="" disabled hidden>Выберите подходящий тариф</option>
                 <option value="Easy Start">Easy Start</option>
                 <option value="Flow Rider">Flow Rider</option>
@@ -73,8 +74,8 @@ export default function Booking() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-5">
-              <input type="text" name="name" required placeholder="Иванов Иван" className="w-full sm:w-[317px] h-[85px] rounded-[85px] border border-[#002B41]/30 bg-transparent px-6 text-[16px] text-[#002B41] outline-none focus:border-[#002B41] placeholder:text-[#002B41]/50" />
-              <input type="tel" name="phone" required placeholder="8(999) 999-99-99" className="w-full sm:w-[317px] h-[85px] rounded-[85px] border border-[#002B41]/30 bg-transparent px-6 text-[16px] text-[#002B41] outline-none focus:border-[#002B41] placeholder:text-[#002B41]/50" />
+              <input type="text" name="name" required placeholder="Иванов Иван" className="w-full sm:w-[317px] h-[85px] rounded-[85px] border border-[#002B41]/30 bg-white/50 backdrop-blur-sm px-6 text-[16px] text-[#002B41] outline-none focus:border-[#002B41] placeholder:text-[#002B41]/50" />
+              <input type="tel" name="phone" required placeholder="8(999) 999-99-99" className="w-full sm:w-[317px] h-[85px] rounded-[85px] border border-[#002B41]/30 bg-white/50 backdrop-blur-sm px-6 text-[16px] text-[#002B41] outline-none focus:border-[#002B41] placeholder:text-[#002B41]/50" />
             </div>
 
             <div className="flex flex-col xl:flex-row items-center gap-6 mt-4">

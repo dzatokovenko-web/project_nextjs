@@ -9,15 +9,12 @@ const formaVariable = localFont({ src: './fonts/FormaDJRCyrillicVariable-VF-Test
 const formaDisplay = localFont({ src: './fonts/FormaDJRCyrillicDisplay-Regular-Testing.ttf', variable: '--font-forma-display', display: 'swap' });
 const panton = localFont({ src: './fonts/ofont.ru_Panton Rust Script.ttf', variable: '--font-panton', display: 'swap' });
 
-export const metadata = { 
-  title: 'Surf Train Co', 
-  description: 'Школа серфинга' 
-};
+export const metadata = { title: 'Surf Train Co', description: 'Школа серфинга' };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
-      <body className={`${formaRegular.variable} ${formaBold.variable} ${formaLight.variable} ${formaVariable.variable} ${formaDisplay.variable} ${panton.variable}`}>
+      <body className={`${formaRegular.variable} ${formaBold.variable} ${formaLight.variable} ${formaVariable.variable} ${formaDisplay.variable} ${panton.variable} bg-[#EEF5FF]`}>
         <Header />
         {children}
       </body>
